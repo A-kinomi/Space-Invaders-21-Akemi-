@@ -1,6 +1,9 @@
 ﻿using System.Collections;
 using UnityEngine;
 
+//Enamys fall down. I changed "y value" of the enemy position.
+//The snow which is not shooted is destroyed after the enough time past.
+
 public class EnemyController : MonoBehaviour
 {
     public float minPosX;
@@ -16,10 +19,10 @@ public class EnemyController : MonoBehaviour
    
     void Start()
     {
-        // Invoke repeating will be called once after timeStep (2nd parameter) amount,
-        // and then repeatedly every timeStep (3rd parameter) amount
+
         InvokeRepeating("Move", timeStep, timeStep);
 
+        //snow is destroyed.
         Destroy(gameObject, destroyAfter);
 
     }
@@ -31,12 +34,11 @@ public class EnemyController : MonoBehaviour
     {
         if (isMovingRight)
         {
-            // Moving right
+            //snow move to y direction by 2.
             Vector3 currentPos = transform.position;
             Vector3 newPos = currentPos + new Vector3(moveDistance, -0.2f);
             transform.position = newPos;
 
-            // If aliens group reached the right-most edge, flip their direction
             if (transform.position.x >= maxPosX)
             {
                 isMovingRight = false;
@@ -44,12 +46,10 @@ public class EnemyController : MonoBehaviour
         }
         else
         {
-            // Moving left
             Vector3 currentPos = transform.position;
             Vector3 newPos = currentPos - new Vector3(moveDistance, 0.2f);
             transform.position = newPos;
 
-            // If aliens group reached the left-most edge, flip their direction
             if (transform.position.x <= minPosX)
             {
                 isMovingRight = true;

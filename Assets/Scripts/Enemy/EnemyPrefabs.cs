@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-//This is the new mechanics I added to the enamies.
+//This is the new mechanics I added to the enamies. New enamy prefabs are gernerated constantly.
 
 public class EnemyPrefabs : MonoBehaviour
 {

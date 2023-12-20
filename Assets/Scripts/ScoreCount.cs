@@ -4,6 +4,9 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
+//The score is printed on the ScorePanel.
+//Every 50 points, the clearPanel shows up, and the Update fanction stop working.
+
 public class ScoreCount : MonoBehaviour
 {
 
@@ -22,7 +25,6 @@ public class ScoreCount : MonoBehaviour
 
 
         clearPanel.SetActive(false);
-        //continueButton.SetActive(true);
     }
 
     
@@ -44,13 +46,13 @@ public class ScoreCount : MonoBehaviour
             } else if (score % 50 != 0)
             {
                 IsContinueClick = false;
-                //continueButton.SetActive(true);
             }
         }
 
         if(score > 0)
         {
             scoreText.text = score.ToString() + " points!";
+            //scoreText.text = score + " points!"; It seems to be no problem.
         }
 
     }
