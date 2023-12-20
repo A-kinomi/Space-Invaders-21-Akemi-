@@ -52,7 +52,6 @@ public class ScoreCount : MonoBehaviour
         if(score > 0)
         {
             scoreText.text = score.ToString() + " points!";
-            //scoreText.text = score + " points!"; It seems to be no problem.
         }
 
     }
