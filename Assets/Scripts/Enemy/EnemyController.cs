@@ -11,19 +11,21 @@ public class EnemyController : MonoBehaviour
 
     bool isMovingRight = true;
 
-    // Use this for initialization
+    public float destroyAfter = 100f;
+
+   
     void Start()
     {
         // Invoke repeating will be called once after timeStep (2nd parameter) amount,
         // and then repeatedly every timeStep (3rd parameter) amount
         InvokeRepeating("Move", timeStep, timeStep);
+
+        Destroy(gameObject, destroyAfter);
+
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+
+  
 
     void Move()
     {
@@ -31,7 +33,7 @@ public class EnemyController : MonoBehaviour
         {
             // Moving right
             Vector3 currentPos = transform.position;
-            Vector3 newPos = currentPos + new Vector3(moveDistance, -0.1f);
+            Vector3 newPos = currentPos + new Vector3(moveDistance, -0.2f);
             transform.position = newPos;
 
             // If aliens group reached the right-most edge, flip their direction
@@ -44,7 +46,7 @@ public class EnemyController : MonoBehaviour
         {
             // Moving left
             Vector3 currentPos = transform.position;
-            Vector3 newPos = currentPos - new Vector3(moveDistance, 0.1f);
+            Vector3 newPos = currentPos - new Vector3(moveDistance, 0.2f);
             transform.position = newPos;
 
             // If aliens group reached the left-most edge, flip their direction

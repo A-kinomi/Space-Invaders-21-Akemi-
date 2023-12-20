@@ -13,10 +13,10 @@ public class Shooter : MonoBehaviour
         
     }
 
-    // Update is called once per frame
+
     void Update()
     {
-        if (Input.GetButtonDown("Jump"))
+        if (Input.GetButtonDown("Jump") && Time.timeScale == 1)
         {
             Shoot();
         }

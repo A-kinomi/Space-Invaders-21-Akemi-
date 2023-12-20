@@ -9,7 +9,7 @@ public class ProjectileBehaviour : MonoBehaviour
 
     public float verticalValue = 1f;
 
-    // Start is called before the first frame update
+    
     void Start()
     {
 		// Another form of the Destroy function, which allows us to destroy an object
@@ -17,7 +17,7 @@ public class ProjectileBehaviour : MonoBehaviour
         Destroy(gameObject, destroyAfter);
     }
 
-    // Update is called once per frame
+
     void Update()
     {
 		// Moves the game object along the Y-axis (X is 0f), and we make the Y value into 

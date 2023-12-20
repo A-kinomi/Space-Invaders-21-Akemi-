@@ -159,6 +159,7 @@ MonoBehaviour:
   maxPosX: 2
   moveDistance: 1
   timeStep: 1
+  destroyAfter: 100
 --- !u!1001 &6637305187910918534
 PrefabInstance:
   m_ObjectHideFlags: 0

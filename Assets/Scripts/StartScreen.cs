@@ -10,4 +10,9 @@ public class StartScreen : MonoBehaviour
     {
         SceneManager.LoadScene("Original Invader Screen");
     }
+
+    public void QuitButton()
+    {
+        SceneManager.LoadScene("Title");
+    }
 }

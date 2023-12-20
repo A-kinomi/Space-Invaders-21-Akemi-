@@ -1,24 +1,24 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-//from here original
 using UnityEngine.UI;
 using TMPro;
 
 public class EnemyBehaviour : MonoBehaviour
 {
     public AudioClip destructionSFX;
-    public GameObject scoreText; //challenge!
+    public GameObject scoreText;
+  
 
     private void Start()
     {
         scoreText = GameObject.Find("ScoreText");
-    }
+    
+     }
 
-
-    private void OnTriggerEnter2D(Collider2D collision)
+    
+    private void OnTriggerEnter2D(Collider2D collision)                                  
     {
-        //print("I'm hit!");
 
 		
         if (collision.tag == "PlayerProjectile")
